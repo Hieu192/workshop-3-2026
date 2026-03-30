@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo IAM user on QUẢN LÝ TRUY CẬP DỊCH VỤ EC2 VỚI RESOURCE TAGS THÔNG QUA DỊCH VỤ IAM</title>
+<<<<<<< HEAD
+    <link>http://localhost:1313/vi/2-prerequiste/2.1-createiamuser/</link>
+    <description>Recent content in Tạo IAM user on QUẢN LÝ TRUY CẬP DỊCH VỤ EC2 VỚI RESOURCE TAGS THÔNG QUA DỊCH VỤ IAM</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/vi/2-prerequiste/2.1-createiamuser/index.xml" rel="self" type="application/rss+xml" />
+=======
+    <link>/vi/2-prerequiste/2.1-createiamuser/</link>
+    <description>Recent content in Tạo IAM user on QUẢN LÝ TRUY CẬP DỊCH VỤ EC2 VỚI RESOURCE TAGS THÔNG QUA DỊCH VỤ IAM</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="/vi/2-prerequiste/2.1-createiamuser/index.xml" rel="self" type="application/rss+xml" />
+>>>>>>> 77f5b8b30efdbf105a39b1bd0e2e1ea4badd756e
+  </channel>
+</rss>
