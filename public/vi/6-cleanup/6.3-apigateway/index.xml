@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tạo API Gateway WebSocket on QUẢN LÝ TRUY CẬP DỊCH VỤ EC2 VỚI RESOURCE TAGS THÔNG QUA DỊCH VỤ IAM</title>
-    <link>http://localhost:1313/workshop-3-2026/vi/6-cleanup/6.3-apigateway/</link>
+    <link>https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.3-apigateway/</link>
     <description>Recent content in Tạo API Gateway WebSocket on QUẢN LÝ TRUY CẬP DỊCH VỤ EC2 VỚI RESOURCE TAGS THÔNG QUA DỊCH VỤ IAM</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/workshop-3-2026/vi/6-cleanup/6.3-apigateway/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.3-apigateway/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

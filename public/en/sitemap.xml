@@ -2,210 +2,210 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/workshop-3-2026/1-introduce/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/1-introduce/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/1-introduce/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/1-introduce/"
+                href="https://hieu192.github.io/workshop-3-2026/1-introduce/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/"
+                href="https://hieu192.github.io/workshop-3-2026/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/8-/8.1-validation/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.1-validation/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/8-/8.1-validation/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.1-validation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/8-/8.1-validation/"
+                href="https://hieu192.github.io/workshop-3-2026/8-/8.1-validation/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/8-/8.2-cloudwatch/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.2-cloudwatch/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/8-/8.2-cloudwatch/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.2-cloudwatch/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/8-/8.2-cloudwatch/"
+                href="https://hieu192.github.io/workshop-3-2026/8-/8.2-cloudwatch/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/2-createiamuser/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/2-createiamuser/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/2-createiamuser/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/2-createiamuser/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/2-createiamuser/"
+                href="https://hieu192.github.io/workshop-3-2026/2-createiamuser/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/3-createiampolicy/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/3-createiampolicy/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/3-createiampolicy/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/3-createiampolicy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/3-createiampolicy/"
+                href="https://hieu192.github.io/workshop-3-2026/3-createiampolicy/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/8-/8.3-securitycost/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.3-securitycost/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/8-/8.3-securitycost/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.3-securitycost/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/8-/8.3-securitycost/"
+                href="https://hieu192.github.io/workshop-3-2026/8-/8.3-securitycost/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/4-createiamrole/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/4-createiamrole/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/4-createiamrole/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/4-createiamrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/4-createiamrole/"
+                href="https://hieu192.github.io/workshop-3-2026/4-createiamrole/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/5-checkpolicy/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/5-checkpolicy/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/5-checkpolicy/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/5-checkpolicy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/5-checkpolicy/"
+                href="https://hieu192.github.io/workshop-3-2026/5-checkpolicy/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/6-cleanup/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/6-cleanup/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/6-cleanup/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/6-cleanup/"
+                href="https://hieu192.github.io/workshop-3-2026/6-cleanup/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/7-/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/7-/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/7-/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/7-/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/7-/"
+                href="https://hieu192.github.io/workshop-3-2026/7-/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/8-/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/8-/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/8-/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/8-/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/8-/"
+                href="https://hieu192.github.io/workshop-3-2026/8-/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/9-/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/9-/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/9-/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/9-/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/9-/"
+                href="https://hieu192.github.io/workshop-3-2026/9-/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/10-cleanup/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/10-cleanup/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/10-cleanup/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/10-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/10-cleanup/"
+                href="https://hieu192.github.io/workshop-3-2026/10-cleanup/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/categories/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/categories/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/categories/"
+                href="https://hieu192.github.io/workshop-3-2026/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/workshop-3-2026/tags/</loc>
+    <loc>https://hieu192.github.io/workshop-3-2026/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/workshop-3-2026/vi/tags/"
+                href="https://hieu192.github.io/workshop-3-2026/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/workshop-3-2026/tags/"
+                href="https://hieu192.github.io/workshop-3-2026/tags/"
                 />
   </url>
 </urlset>
