@@ -1,30 +1,33 @@
 ---
-title : "Managing EC2 Resource Tag Access with AWS IAM"
-date : 2025
-weight : 1
+title : "Solution Overview"
+date :  2025
+weight : 1 
 chapter : false
 ---
 
-# Managing EC2 Resource Tag Access with AWS IAM
+# Building a Priority-Based Message Processing System
 
-#### Overview
+#### Introduction
+Welcome to this detailed workshop on building an intelligent message distribution and processing system on AWS. This is a classic challenge in Enterprise systems, where we need to ensure High Priority requests are handled first, while maintaining a Delay mechanism for less critical tasks to optimize resources.
 
-This workshop will guide us through the process of managing EC2 service access with **Resource Tags** through detailed configuration of policies and IAM roles with specific **permissions**. Using **Resource Tags** will be extremely useful when we scale up in decentralized management.
+#### System Architecture
+The system consists of several core components:
+- **Backend:** Spring Boot 3 running on **AWS App Runner**.
+- **Messaging:** **Amazon MQ (ActiveMQ)** supporting the JMS Priority standard.
+- **Database:** **DynamoDB** to store processing states.
+- **Real-time:** **WebSocket API (Gateway)** + **Lambda** for immediate status updates on the interface.
+- **Frontend:** React SPA distributed via **CloudFront** and **S3**.
 
-In this workshop, we will create policies with roles that can be used by certain users, such as **EC2 Administrators**. These **policies** will only allow EC2 Administrators to create related resources when they meet the stated requirements and are based on certain **Resource Tags**.
+![Architecture Overview](/images/00/0001.jpeg)
 
-{{< figure src="../images/serviceicon2.png" title="AWS IAM" width=150pc >}}
+#### What Will You Learn?
+1. How to configure Amazon MQ to support priority queues.
+2. How to use Secrets Manager to manage sensitive information.
+3. How to set up a Real-time flow using DynamoDB Streams and WebSocket.
+4. How to deploy containerized applications to App Runner.
+5. How to secure Frontend applications with CloudFront Origin Access Control (OAC).
 
-#### Objectives
+> [!NOTE]
+> This workshop provides two methods: Manual configuration on the Console (to understand the fundamentals) and Full Automation using Source Code (IaC).
 
-- Apply IAM least privilege method.
-- Specify IAM policies with detailed conditions (**IAM Policy Conditions**)
-
-#### Prerequisites
-
-- AWS account used for **Testing** purposes.
-- **IAM User** (MFA configured) capable of performing **assume role** tasks.
-
-{{% notice info %}}
-This lab will not be suitable if your account only has access to one Region.
-{{% /notice %}}
+Let's get started by setting up the database in the next step!

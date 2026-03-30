@@ -1,18 +1,19 @@
 ---
-title : "Check Policy"
+title : "Deploy Spring Boot Application to AWS (ECR + App Runner)"
 date :  2025
 weight : 5 
 chapter : false
 pre : " <b> 5. </b> "
 ---
 
-#### Check Policy
+### Section Overview
 
+We will deploy our Backend source code to the cloud using a Container architecture. This is split into 2 steps:
+- Package the Image and push it to Amazon ECR.
+- Run the application on AWS App Runner - a Serverless Container service.
 
-Let's review the brief description of each IAM Policy:
+Main topics in this section:
+- Build and Push the Docker Image.
+- Launch the Backend API and configure environment variables.
 
-- **ec2-list-read**: This policy will only allow read-only permissions for EC2 service in regions **us-east-1** and **us-west-1**
-- **ec2-create-tags**: This policy will allow creating tags for EC2 service, with the execution condition being when we proceed to create an EC2 instance
-- **ec2-create-tags-existing**: This policy will allow creating tags for EC2 service, with the condition being when and only when resources (already existing or to be newly created) are assigned tags as follows **"Key=Team,Value=Alpha"**
-- **ec2-run-instances**: This policy allows creating EC2 instances when and only when conditions about AWS Regions (**us-east-1 & us-west-1**) and Resource Tags (**Key=Team,Value=Alpha**) are satisfied. Next, this policy allows creating related resources at the time we proceed to create EC2 instance, with conditions about AWS Regions (**us-east-1 & us-west-1**).
-- **ec2-manage-instances**: This policy allows performing basic operations (reboot, terminate, start, stop) on EC2 instances, with conditions that AWS Regions (**us-east-1 & us-west-1**) and Resource Tags (**Key=Team,Value=Alpha**) must be satisfied.
+![App Runner Overview](/images/5/0001.png)

@@ -6,26 +6,23 @@ chapter : false
 pre : " <b> 8. </b> "
 ---
 
-#### This section Overview
+#### Section Overview
 
-After setting up the WebSocket stream and deploying the Frontend Application to CloudFront, we will begin validating the priority-based message processing system. This section provides detailed testing procedures (manual and automated) and explains how to monitor the real-time processing flow.
+After completing the WebSocket flow setup and deploying the Frontend application to CloudFront, we will begin testing the priority-based message processing system. This section will guide you on how to perform automated and manual tests and observe the message processing in Real-time.
 
-**Main topics:**
-1. **Set up real-time updates**: Recap of API Gateway and Lambda Stream Processor configuration.
-2. **Deploy React Frontend**: Build and upload the frontend to S3/CloudFront.
-3. **Validate the Solution**: Send messages with varying priorities (High/Low/Medium).
-4. **CloudWatch Monitoring**: Track performance with dashboards and alarms.
-5. **Security and Cost Considerations**: Key operational factors for production.
-
-![Amazon MQ Monitor Web UI](/images/8/monitor.png)
+**Main Topics:**
+1. **WebSocket and Real-time Setup**: Recap of API Gateway and Lambda Stream Processor configuration.
+2. **React App Deployment**: Uploading frontend source code to S3 and global distribution via CloudFront.
+3. **Solution Validation**: Performing tests by sending messages with different priority levels (High/Low/Medium).
+4. **Monitoring via CloudWatch**: Tracking system performance through dashboards and alerts.
+5. **Security and Cost Considerations**: Factors to consider for optimal system operation.
 
 ---
 
-#### 1. Set up real-time updates
-For this step, we implement WebSocket support for real-time status updates using AWS Lambda to process DynamoDB streams and send updates to connected clients using Amazon API Gateway WebSocket connections. You can find the code snippet for this in [this link](../6-WebSocket/).
+#### 1. Set up Real-time Updates
+In this step, we have implemented WebSocket support to update message status instantly. Using AWS Lambda to process DynamoDB Streams and send updates to connected users via Amazon API Gateway WebSocket connection.
+*You can view the detailed source code and full instructions [here](../6-WebSocket/)* (Link to WebSocket configuration section).
 
-#### 2. Deploy the React application to Amazon S3 and Amazon CloudFront
-In this step, we create a frontend application to enable the WebSocket connection for seeing the messages getting updated in the DynamoDB and API Gateway WebSocket connections.
-*Refer to the AWS CDK code for building the frontend in [this section](../7-CloudFront/).*
-
-Proceed to the next page to start the **Validation Procedures**.
+#### 2. Deploy React Web App to S3 and CloudFront
+We've created a React app to enable the WebSocket connection, allowing us to see messages updated dynamically in DynamoDB and API Gateway WebSocket notifications.
+*Refer to detailed steps [here](../7-CloudFront/) (Link to CloudFront configuration section).*

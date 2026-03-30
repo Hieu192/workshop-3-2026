@@ -1,5 +1,5 @@
 ---
-title : "Cleanup and Costs"
+title : "Resource Cleanup and Costs"
 date :  2025
 weight : 10
 chapter : false
@@ -8,9 +8,9 @@ pre : " <b> 10. </b> "
 
 #### Section Overview
 
-To ensure that no additional costs are incurred after the exercise, we will perform a cleanup of the resources created.
+To ensure no costs are incurred after the workshop, we will perform a cleanup of the created resources.
 
-The system provides the following cleanup and cost assessment methods:
-1. **Manual Cleanup (Console)**: Guidance on deleting individual services on the AWS Console.
-2. **Automated Cleanup (Script & CDK)**: Using the `destroy.sh` script or the `cdk destroy` command to quickly and thoroughly delete all resources (Recommended: `destroy.sh`).
-3. **Cost Considerations**: An estimated monthly operating cost table for the project.
+The system provides cleanup methods and cost estimation as follows:
+1. **Manual Cleanup (Console)**: Guidance on deleting each service on the AWS interface.
+2. **Automated Cleanup (Script & CDK)**: Use the `destroy.sh` script or `cdk destroy` command to quickly and thoroughly delete all resources. (`destroy.sh` is recommended).
+3. **Cost Considerations**: Estimation table for monthly operating costs for the project.

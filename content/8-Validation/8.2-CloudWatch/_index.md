@@ -1,5 +1,5 @@
 ---
-title : "CloudWatch Monitoring"
+title : "Monitoring with CloudWatch"
 date :  2025
 weight : 2
 chapter : false
@@ -8,20 +8,22 @@ pre : " <b> 8.2. </b> "
 
 #### Amazon CloudWatch Dashboards and Alarms
 
-AWS recommends creating Amazon CloudWatch dashboards to track your priority-based message processing system’s performance across multiple dimensions. 
+AWS recommends creating Amazon CloudWatch dashboards to monitor the performance of your priority-based message processing system across various dimensions.
 
-**Monitor message processing by priority levels:**
-Make sure high-priority messages are processed first and identify any bottlenecks in your priority routing logic. The following screenshot shows an example dashboard.
+**Monitoring by Priority Levels:**
+You can track message processing across different priority levels to ensure that High Priority messages are consistently handled first. This also helps identify any potential bottlenecks in your priority routing logic.
 
-![CloudWatch Dashboards](/images/8/dashboard-1.png)
+![CloudWatch Sample Dashboard](/images/8-2/0001.png)
 
-**Track system load and latency:**
-You can track queue depth and processing times to understand system load and latency patterns, helping you optimize resource allocation and identify when scaling is needed. 
+*The image above shows an example of a dashboard tracking the number of successfully processed messages by priority level.*
 
-![DynamoDB performance metrics](/images/8/dashboard-2.png)
+**Identify System Load and Latency:**
+Monitor Queue Depth and Processing Times to understand system load patterns and latency characteristics. This helps in optimizing resource allocation and identifying when scaling is necessary.
 
-**Observe DynamoDB performance:**
-Monitor metrics including read/write capacity consumption, throttling events, and latency to make sure your database layer maintains optimal performance under varying loads.
+![DynamoDB Performance Monitoring](/images/8-2/0002.png)
 
-**Implement custom metrics:**
-Additionally, implement application-specific custom metrics such as message processing success rates, retry counts, and business-specific KPIs to gain deeper insights into your application’s behavior and make data-driven decisions for continuous improvement.
+**Monitor DynamoDB Performance:**
+Observe DynamoDB performance metrics, including Read/Write Capacity consumption, throttling events, and latency to ensure the database layer maintains optimal performance under varying loads.
+
+**Add Custom Metrics:**
+Additionally, implement application-specific custom metrics such as message success rate, retry counts, and business-specific KPIs to gain deeper insights into application behavior and make data-driven decisions for continuous improvement.

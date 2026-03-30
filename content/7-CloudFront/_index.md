@@ -1,46 +1,19 @@
 ---
-title : "Resource Cleanup"
+title : "Global Distribution and Security with CloudFront"
 date :  2025
-weight : 6
+weight : 7
 chapter : false
-pre : " <b> 6. </b> "
+pre : " <b> 7. </b> "
 ---
 
-#### Resource Cleanup
+#### Section Overview
 
-We will proceed to clean up the resources created from this workshop:
+The web interface (Frontend) of the application will be stored and secured according to Enterprise standards. It should absolutely not be completely Public on S3 but will only allow single access via the CloudFront CDN distribution service.
 
-- From the **AWS Console** of **IAM role - ec2-admin-team-alpha**, click on the role name in the upper right corner and select **Switch back**.
+Steps to perform:
+- Create an S3 Private Bucket to contain the Frontend source code.
+- Set up the CloudFront service with the **Origin Access Control (OAC)** mechanism.
+- Update the S3 Policy to only accept requests from this CloudFront CDN.
+- Configure the API Backend URL and build the React SPA.
 
-![AWS IAM](/images/updateimage/77.png)
-
-- Access the **IAM** service via the URL - https://console.aws.amazon.com/iam/.
-- In the left navigation bar, select **Roles** and find **ec2-admin-team-alpha**.
-
-![AWS IAM](/images/updateimage/78.png)
-
-- Select **ec2-admin-team-alpha** and click the **Delete role** button.
-
-![AWS IAM](/images/updateimage/79.png)
-
-- In the left navigation bar, select **Policies** and find the following policies one by one, then click the **Delete policy** button.
-  - ec2-list-read
-  - ec2-create-tags
-  - ec2-create-tags-existing
-  - ec2-run-instances
-  - ec2-manage-instances
-  - Do the same with other policies.
-
-![AWS IAM](/images/updateimage/80.png)
-
-![AWS IAM](/images/updateimage/81.png)
-
-
-
-- In the left navigation bar, select **User**, choose **AdminUser** and click **Delete**
-
-![AWS IAM](/images/updateimage/88.png)
-
-- Type **confirm** and click **Delete user**
-
-![AWS IAM](/images/updateimage/89.png)
+![CloudFront Architecture Logo](/images/7/0001.png)
