@@ -1,4 +1,6 @@
 baseURL = "https://hieu192.github.io/workshop-3-2026/"
+canonifyURLs = true
+relativeURLs = true
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
