@@ -13,7 +13,7 @@ Giao diện web (Frontend) của ứng dụng sẽ được lưu trữ và bảo
 Các bước thực hiện:
 - Tạo S3 Private Bucket để chứa mã nguồn Frontend.
 - Thiết lập dịch vụ CloudFront với cơ chế **Origin Access Control (OAC)**.
-- Cập nhật Policy của S3 để chỉ chấp nhận yêu cầu từ cái CloudFront CDN đó.
+- Cập nhật Policy của S3 để chỉ chấp nhận yêu cầu từ CloudFront CDN này.
 - Cấu hình API Backend URL và build React SPA.
 
 ![CloudFront Architecture Logo](/images/7/0001.png)

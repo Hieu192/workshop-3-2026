@@ -33,19 +33,19 @@ Các nội dung chính trong phần này:
    }
    ```
 ![Secrets Manager Logo](/images/3/0004.png)
-- Tiếp tục kéo xuống dưới cùng và chọn **Next**.
+   - Tiếp tục kéo xuống dưới cùng và chọn **Next**.
 ![Secrets Manager Logo](/images/3/0005.png)
-5. Ở phần **Configure secret**:
+4. Ở phần **Configure secret**:
    - Đặt tên Secret là: `MessagingStack-MessagingMqPassword`. (Tên này phải trùng khớp hoàn toàn với cấu hình @Value trong Spring Boot).
    - Description: `Password for Amazon MQ Broker`
 ![Secrets Manager Logo](/images/3/0006.png)
-- Tiếp tục kéo xuống dưới cùng và chọn **Next**.
+   - Tiếp tục kéo xuống dưới cùng và chọn **Next**.
 ![Secrets Manager Logo](/images/3/0007.png)
 
-6. Ở phần **Configure rotation**, chọn **Disable automatic rotation** (mặc định). Nhấn **Next**.
+5. Ở phần **Configure rotation**, chọn **Disable automatic rotation** (mặc định). Nhấn **Next**.
 ![Secrets Manager Logo](/images/3/0008.png)
 
-7. Ở phần **Review**, kiểm tra lại thông tin và nhấn **Store**.
+6. Ở phần **Review**, kiểm tra lại thông tin và nhấn **Store**.
 ![Secrets Manager Logo](/images/3/0009.png)
 ![Secrets Manager Logo](/images/3/0010.png)
 

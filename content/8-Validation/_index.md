@@ -22,10 +22,10 @@ After setting up the WebSocket stream and deploying the Frontend Application to 
 ---
 
 #### 1. Set up real-time updates
-For this step, we implement WebSocket support for real-time status updates using AWS Lambda to process DynamoDB streams and send updates to connected clients using Amazon API Gateway WebSocket connections. You can find the code snippet for this in [this link](../6-Cleanup/).
+For this step, we implement WebSocket support for real-time status updates using AWS Lambda to process DynamoDB streams and send updates to connected clients using Amazon API Gateway WebSocket connections. You can find the code snippet for this in [this link](../6-WebSocket/).
 
 #### 2. Deploy the React application to Amazon S3 and Amazon CloudFront
 In this step, we create a frontend application to enable the WebSocket connection for seeing the messages getting updated in the DynamoDB and API Gateway WebSocket connections.
-*Refer to the AWS CDK code for building the frontend in [this section](../7-/).*
+*Refer to the AWS CDK code for building the frontend in [this section](../7-CloudFront/).*
 
 Proceed to the next page to start the **Validation Procedures**.

@@ -34,7 +34,7 @@ mvn clean package -DskipTests
 ![ECR View Push Commands](/images/5-1/0007.png)
 ![ECR View Push Commands](/images/5-1/0008.png)
 
-- Bạn phải nhớ mở docker desktop trước khi chạy lệnh, không là lỗi như bên dưới
+- Bạn phải nhớ mở Docker Desktop trước khi chạy lệnh, nếu không sẽ bị lỗi như sau:
 ![ECR View Push Commands](/images/5-1/0009.png)
 ![ECR View Push Commands](/images/5-1/0010.png)
 ![ECR View Push Commands](/images/5-1/0011.png)

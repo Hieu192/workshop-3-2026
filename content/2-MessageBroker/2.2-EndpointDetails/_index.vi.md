@@ -16,7 +16,7 @@ Quá trình khởi tạo Broker có thể kéo dài tới 15-20 phút. Sau khi t
 ![Broker Endpoints](/images/2-2/0002.png)
 3. Giữ thông số này cẩn thận, đây là URL bạn sẽ cần điền vào biến môi trường của Spring Boot ở các phần sau.
 
-4. Thêm security group Thêm quy tắc mới để cho phép apprunner có thể truy cập được như sau:
+4. Thêm security group. Thêm quy tắc mới để cho phép apprunner có thể truy cập được như sau:
     - Type: Custom TCP
     - Port Range: 61617
     - Source: Chọn 0.0.0.0/0 (Để cho phép App Runner từ Internet có thể gõ cửa).
