@@ -1,4 +1,4 @@
-baseURL = "https://000028.awsstudygroup.com"
+baseURL = "https://hieu192.github.io/workshop-3-2026/"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
