@@ -22,7 +22,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "EC2 SERVICE ACCESS MANAGEMENT WITH RESOURCE TAGS THROUGH IAM SERVICES"
+title = "Priority-Based Message Processing"
 weight = 1
 languageName = "English"
 
