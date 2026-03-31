@@ -2,210 +2,457 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hieu192.github.io/workshop-3-2026/1-introduce/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/6-websocket/6.1-websockettable/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/1-introduce/"
+                href="http://localhost:1313/workshop-3-2026/vi/6-websocket/6.1-websockettable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/1-introduce/"
+                href="http://localhost:1313/workshop-3-2026/6-websocket/6.1-websockettable/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/1-dynamodb/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/"
+                href="http://localhost:1313/workshop-3-2026/vi/1-dynamodb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/"
+                href="http://localhost:1313/workshop-3-2026/1-dynamodb/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.1-validation/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/4-iamconfiguration/4.1-createpolicy/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.1-validation/"
+                href="http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/4.1-createpolicy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/8-/8.1-validation/"
+                href="http://localhost:1313/workshop-3-2026/4-iamconfiguration/4.1-createpolicy/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.2-cloudwatch/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/7-cloudfront/7.1-privates3/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.2-cloudwatch/"
+                href="http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.1-privates3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/8-/8.2-cloudwatch/"
+                href="http://localhost:1313/workshop-3-2026/7-cloudfront/7.1-privates3/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/2-createiamuser/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/1-dynamodb/1.1-createtable/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/2-createiamuser/"
+                href="http://localhost:1313/workshop-3-2026/vi/1-dynamodb/1.1-createtable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/2-createiamuser/"
+                href="http://localhost:1313/workshop-3-2026/1-dynamodb/1.1-createtable/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/3-createiampolicy/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/2-messagebroker/2.1-createbroker/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/3-createiampolicy/"
+                href="http://localhost:1313/workshop-3-2026/vi/2-messagebroker/2.1-createbroker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/3-createiampolicy/"
+                href="http://localhost:1313/workshop-3-2026/2-messagebroker/2.1-createbroker/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/8-/8.3-securitycost/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/10-cleanup/10.1-manualcleanup/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/8-/8.3-securitycost/"
+                href="http://localhost:1313/workshop-3-2026/vi/10-cleanup/10.1-manualcleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/8-/8.3-securitycost/"
+                href="http://localhost:1313/workshop-3-2026/10-cleanup/10.1-manualcleanup/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/4-createiamrole/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/5-appdeployment/5.1-pushdocker/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/4-createiamrole/"
+                href="http://localhost:1313/workshop-3-2026/vi/5-appdeployment/5.1-pushdocker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/4-createiamrole/"
+                href="http://localhost:1313/workshop-3-2026/5-appdeployment/5.1-pushdocker/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/5-checkpolicy/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/5-checkpolicy/"
+                href="http://localhost:1313/workshop-3-2026/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/5-checkpolicy/"
+                href="http://localhost:1313/workshop-3-2026/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/6-cleanup/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/8-validation/8.1-validation/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/"
+                href="http://localhost:1313/workshop-3-2026/vi/8-validation/8.1-validation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/6-cleanup/"
+                href="http://localhost:1313/workshop-3-2026/8-validation/8.1-validation/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/7-/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/9-automation/9.1-cdkmodules/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/7-/"
+                href="http://localhost:1313/workshop-3-2026/vi/9-automation/9.1-cdkmodules/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/7-/"
+                href="http://localhost:1313/workshop-3-2026/9-automation/9.1-cdkmodules/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/8-/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/10-cleanup/10.2-cdkdestroy/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/8-/"
+                href="http://localhost:1313/workshop-3-2026/vi/10-cleanup/10.2-cdkdestroy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/8-/"
+                href="http://localhost:1313/workshop-3-2026/10-cleanup/10.2-cdkdestroy/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/9-/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/7-cloudfront/7.2-cloudfrontoac/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/9-/"
+                href="http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.2-cloudfrontoac/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/9-/"
+                href="http://localhost:1313/workshop-3-2026/7-cloudfront/7.2-cloudfrontoac/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/10-cleanup/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/6-websocket/6.2-connectionhandler/</loc>
     <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/10-cleanup/"
+                href="http://localhost:1313/workshop-3-2026/vi/6-websocket/6.2-connectionhandler/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/10-cleanup/"
+                href="http://localhost:1313/workshop-3-2026/6-websocket/6.2-connectionhandler/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/categories/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/2-messagebroker/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/categories/"
+                href="http://localhost:1313/workshop-3-2026/vi/2-messagebroker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/categories/"
+                href="http://localhost:1313/workshop-3-2026/2-messagebroker/"
                 />
   </url><url>
-    <loc>https://hieu192.github.io/workshop-3-2026/tags/</loc>
+    <loc>http://localhost:1313/workshop-3-2026/4-iamconfiguration/4.2-createrole/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://hieu192.github.io/workshop-3-2026/vi/tags/"
+                href="http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/4.2-createrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hieu192.github.io/workshop-3-2026/tags/"
+                href="http://localhost:1313/workshop-3-2026/4-iamconfiguration/4.2-createrole/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/9-automation/9.2-deployscript/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/9-automation/9.2-deployscript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/9-automation/9.2-deployscript/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/1-dynamodb/1.2-enablestreams/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/1-dynamodb/1.2-enablestreams/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/1-dynamodb/1.2-enablestreams/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/5-appdeployment/5.2-launchapprunner/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/5-appdeployment/5.2-launchapprunner/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/5-appdeployment/5.2-launchapprunner/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/8-validation/8.2-cloudwatch/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/8-validation/8.2-cloudwatch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/8-validation/8.2-cloudwatch/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/2-messagebroker/2.2-endpointdetails/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/2-messagebroker/2.2-endpointdetails/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/2-messagebroker/2.2-endpointdetails/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/6-websocket/6.3-apigateway/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/6-websocket/6.3-apigateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/6-websocket/6.3-apigateway/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/3-secretsmanager/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/3-secretsmanager/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/3-secretsmanager/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/8-validation/8.3-securitycost/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/8-validation/8.3-securitycost/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/8-validation/8.3-securitycost/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/4-iamconfiguration/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/4-iamconfiguration/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/6-websocket/6.4-streamprocessor/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/6-websocket/6.4-streamprocessor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/6-websocket/6.4-streamprocessor/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/7-cloudfront/7.3-policyupload/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.3-policyupload/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/7-cloudfront/7.3-policyupload/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/5-appdeployment/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/5-appdeployment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/5-appdeployment/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/6-websocket/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/6-websocket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/6-websocket/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/7-cloudfront/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/7-cloudfront/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/7-cloudfront/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/8-validation/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/8-validation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/8-validation/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/9-automation/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/9-automation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/9-automation/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/10-cleanup/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/10-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/10-cleanup/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/workshop-3-2026/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/workshop-3-2026/vi/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/workshop-3-2026/tags/"
                 />
   </url>
 </urlset>

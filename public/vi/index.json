@@ -1,251 +1,251 @@
 [
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/10-cleanup/10.1-manualcleanup/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/10-cleanup/10.1-manualcleanup/",
 	"title": "Dọn dẹp Thủ công (Console)",
 	"tags": [],
 	"description": "",
 	"content": "Dọn dẹp tài nguyên trên Console Để tránh phát sinh chi phí không mong muốn, hãy chắc chắn xóa các tài nguyên sau khi học xong bài lab này:\nAWS App Runner: Xóa Service priority-backend-api. Amazon MQ (Broker): Xóa Broker PriorityMessageBroker. S3 Bucket: Xóa sạch nội dung (Empty) và xóa cái S3 bucket priority-frontend-bucket-2025. CloudFront: Chọn Distribution, bấm Disable, sau đó nhấn Delete. DynamoDB: Xóa các bảng PriorityItemsTable và simple-websocket-connections. Secrets Manager: Chọn Secret MessagingStack-MessagingMqPassword, bấm Delete secret. ECR Repository: Xóa repository priority-spring-app. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/5-checkpolicy/5.1-pushdocker/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/5-appdeployment/5.1-pushdocker/",
 	"title": "Đưa mã nguồn lên ECR",
 	"tags": [],
 	"description": "",
-	"content": "Đẩy mã nguồn lên Amazon ECR Tải và chuẩn bị mã nguồn Backend:\nTrước tiên, hãy tải thư mục nén mã nguồn Spring Boot tại đây: spring-app.zip Sau khi tải về, hãy giải nén ra máy tính của bạn. Mở terminal tại thư mục spring-app vừa giải nén. Build code thành file JAR:\nmvn clean package -DskipTests Đây là file .jar sau khi build code. Truy cập AWS Console, vào dịch vụ Amazon ECR -\u0026gt; Repositories -\u0026gt; Create repository.\nRepository name: Nhập priority-spring-app. Nhấn Create repository. Mở repository vừa tạo, nhấn nút View push commands ở góc phải trên cùng. Lần lượt chạy 4 lệnh hiển thị trong cửa sổ đó trên terminal của bạn để đẩy image lên AWS. Bạn phải nhớ mở docker desktop trước khi chạy lệnh, không là lỗi như bên dưới Sau khi chạy xong 4 lệnh, bạn kiểm tra lại trong ECR sẽ thấy kết quả như sau: "
+	"content": "Đẩy mã nguồn lên Amazon ECR Tải và chuẩn bị mã nguồn Backend:\nTrước tiên, hãy tải thư mục nén mã nguồn Spring Boot tại đây: spring-app.zip Sau khi tải về, hãy giải nén ra máy tính của bạn. Mở terminal tại thư mục spring-app vừa giải nén. Build code thành file JAR:\nmvn clean package -DskipTests Đây là file .jar sau khi build code. Truy cập AWS Console, vào dịch vụ Amazon ECR -\u0026gt; Repositories -\u0026gt; Create repository.\nRepository name: Nhập priority-spring-app. Nhấn Create repository. Mở repository vừa tạo, nhấn nút View push commands ở góc phải trên cùng. Lần lượt chạy 4 lệnh hiển thị trong cửa sổ đó trên terminal của bạn để đẩy image lên AWS. Bạn phải nhớ mở Docker Desktop trước khi chạy lệnh, nếu không sẽ bị lỗi như sau: Sau khi chạy xong 4 lệnh, bạn kiểm tra lại trong ECR sẽ thấy kết quả như sau: "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/9-/9.1-cdkmodules/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/9-automation/9.1-cdkmodules/",
 	"title": "Hiểu về CDK Modules",
 	"tags": [],
 	"description": "",
 	"content": "Hiểu về AWS CDK (Infrastructure as Code) Tất cả 7 phần làm việc cực nhọc phía trước với hàng chục cú click chuột có thể được thực hiện hoàn toàn tự động bằng mã nguồn. AWS CDK cho phép chúng ta thiết kế hạ tầng bằng các file Python. Tại thư mục /infra/modules/ bạn sẽ thấy:\nsimple_websocket.py: Định nghĩa ApiGatewayV2 và 2 hàm Lambda. spa_frontend.py: Định nghĩa CloudFront distribution và S3 OAC. messaging.py: Định nghĩa Amazon MQ và các tham số kỹ thuật (ActiveMQ). app_runner.py: Định nghĩa AWS App Runner service liên kết với ECR image. Dùng lệnh cdk deploy --all để ra lệnh cho AWS CloudFormation xây dựng mạng lưới VPC và hạ tầng một cách đồng bộ.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/2-createiamuser/2.1-createbroker/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/2-messagebroker/2.1-createbroker/",
 	"title": "Khởi tạo Broker",
 	"tags": [],
 	"description": "",
 	"content": "Khởi tạo Broker Amazon MQ Tìm kiếm và truy cập dịch vụ Amazon MQ trên Console. Chọn Create broker. Ở bước Select broker engine, chọn Apache ActiveMQ và nhấn Next. Ở bước Select deployment and storage, chọn Single-instance broker (để tiết kiệm chi phí cho lab) và nhấn Next. Tại phần Configure settings:\nBroker name: Nhập PriorityMessageBroker Broker instance type: Chọn mq.t3.micro ActiveMQ Web Console access: Chuyển sang Yes Username: Nhập admin Password: MyP@ssw0rd2025! (Lưu ý: Bạn nên chọn mật khẩu mạnh hơn). Tiếp theo kéo xuống dưới cùng và chọn Next. Tại phần Review and create, kiểm tra lại và nhấn Create broker. Sau khi tạo xong, bạn chờ khoảng 15-20 phút để Broker chuyển sang trạng thái Running. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/8-/8.1-validation/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/8-validation/8.1-validation/",
 	"title": "Kiểm chứng Giải pháp",
 	"tags": [],
 	"description": "",
 	"content": "Quy trình Kiểm chứng Giải pháp Phần này cung cấp các bước kiểm thử toàn diện để xác minh hệ thống xử lý tin nhắn dựa trên mức độ ưu tiên.\n1. Kịch bản kiểm thử tự động (Automated testing script) Sau khi hoàn tất các bước triển khai, bạn có thể thực hiện một kịch bản kiểm thử toàn diện để kiểm tra hành vi ưu tiên và xử lý trễ:\n#!/bin/bash # Ví dụ về gửi tin nhắn có mức ưu tiên Cao và độ trễ nhất định curl -X POST \u0026#34;$API_URL/api/items\u0026#34; \\ -H \u0026#34;Content-Type: application/json\u0026#34; \\ -d \u0026#39;{ \u0026#34;title\u0026#34;: \u0026#34;High Priority Task\u0026#34;, \u0026#34;priority\u0026#34;: \u0026#34;High\u0026#34;, \u0026#34;delay\u0026#34;: 10 }\u0026#39; Hãy tạo một tệp tin .sh với mã nguồn trên (sau khi thay thế $API_URL bằng URL App Runner của bạn) và thực thi nó để thấy tin nhắn được đưa vào hàng đợi.\n2. Kiểm chứng qua giao diện Web (Validation through Web) Hình ảnh dưới đây minh họa cách cơ chế hàng đợi hoạt động song song với các cập nhật WebSocket thời gian thực:\nGiao diện web cho phép bạn xác thực hệ thống theo các tiêu chí sau:\nCập nhật trạng thái trực tiếp: Tin nhắn thay đổi từ QUEUED sang COMPLETED ngay khi được xử lý qua WebSocket. Thống kê hàng đợi: Xem phân phối tin nhắn theo các mức độ ưu tiên (High/Medium/Low). Timeline xử lý: Quan sát hành vi \u0026ldquo;bỏ qua\u0026rdquo; (bypass) hàng đợi trễ của các tin nhắn High Priority. Trạng thái WebSocket: Hiển thị kết nối đang hoạt động để nhận tin nhắn từ DynamoDB Streams. Truy cập CloudFront URL đã tạo ở bước trước để mở giao diện này. Nếu hệ thống hoạt động đúng, bạn sẽ thấy tin nhắn \u0026ldquo;High Priority\u0026rdquo; được xử lý trước các tin nhắn độ ưu tiên thấp hơn dù có thời gian chờ (delay) giống nhau.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/1-introduce/1.1-createtable/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/1-dynamodb/1.1-createtable/",
 	"title": "Tạo Bảng (Table)",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Bảng DynamoDB Đăng nhập vào AWS Management Console. Trên thanh tìm kiếm ở trên cùng, gõ DynamoDB và chọn dịch vụ DynamoDB. Ở menu bên trái, chọn Tables, sau đó nhấn nút màu cam Create table. Tại phần Table details: Table name: Nhập PriorityItemsTable Partition key: Nhập id (đảm bảo kiểu dữ liệu là String) Tại phần Table settings, để mặc định là Default settings. Cuộn chuột xuống dưới cùng và chọn Create table. Bạn chờ khoảng 1-2 phút trạng thái bảng sẽ chuyển sang Active. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.1-websockettable/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/6-websocket/6.1-websockettable/",
 	"title": "Tạo bảng connections",
 	"tags": [],
 	"description": "",
 	"content": "Tạo bảng simple-websocket-connections WebSocket cần biết \u0026ldquo;ai đang kết nối\u0026rdquo; để gửi tin nhắn.\nVào DynamoDB -\u0026gt; Tables -\u0026gt; Create table. Table name: simple-websocket-connections. Partition key: connectionId (String). Nhấn Create table và kết quả như dưới: "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/7-/7.1-privates3/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.1-privates3/",
 	"title": "Tạo Bucket S3 Nội bộ",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Bucket S3 cho Frontend Dự án này hướng tới tiêu chuẩn bảo mật Enterprise. S3 Bucket của chúng ta sẽ không Public, mà chỉ cho phép duy nhất dịch vụ CloudFront truy cập.\nTruy cập dịch vụ S3 -\u0026gt; Create bucket. Bucket name: priority-frontend-bucket-2025 (Lưu ý: Bạn chọn tên bất kỳ phù hợp, không được trùng lặp trên toàn cầu). Đảm bảo ô Block all public access được chọn đầy đủ. Bấm Create bucket. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/1-introduce/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/1-dynamodb/",
 	"title": "Tạo Cơ sở dữ liệu DynamoDB",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Trong bước đầu tiên này, chúng ta sẽ bắt đầu thiết lập lưu trữ của hệ thống.\nCác nội dung chính trong phần này:\nTạo bảng PriorityItemsTable để theo dõi các yêu cầu. Bật DynamoDB Streams để phục vụ việc chuyển tiếp dữ liệu Real-time. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/4-createiamrole/4.1-createpolicy/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/4.1-createpolicy/",
 	"title": "Tạo Policy (Chính sách quyền)",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Policy cho App Runner Dịch vụ App Runner (Backend) cần có các quyền truy cập vào bảng DynamoDB và giải mã mật khẩu từ Secrets Manager.\nTruy cập dịch vụ IAM -\u0026gt; Policies -\u0026gt; Create policy. Chọn tab JSON và dán đoạn mã sau vào (cấp quyền vào bảng DB và lấy Secret): { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: [ \u0026#34;dynamodb:PutItem\u0026#34;, \u0026#34;dynamodb:GetItem\u0026#34;, \u0026#34;dynamodb:UpdateItem\u0026#34;, \u0026#34;dynamodb:DeleteItem\u0026#34;, \u0026#34;dynamodb:Scan\u0026#34; ], \u0026#34;Resource\u0026#34;: \u0026#34;*\u0026#34; }, { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: \u0026#34;secretsmanager:GetSecretValue\u0026#34;, \u0026#34;Resource\u0026#34;: \u0026#34;*\u0026#34; } ] } 3. Nhấn Next, đặt tên Policy là AppRunnerPriorityPolicy và nhấn Create policy.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/",
 	"title": "Tổng quan giải pháp",
 	"tags": [],
 	"description": "",
 	"content": "Xây dựng Hệ thống Xử lý Tin nhắn Ưu tiên (Priority-Based Message Processing) Giới thiệu Chào mừng bạn đến với bài thực hành chi tiết về việc xây dựng một hệ thống phân phối và xử lý tin nhắn thông minh trên AWS. Đây là một bài toán kinh điển trong các hệ thống Enterprise, nơi chúng ta cần đảm bảo các yêu cầu quan trọng (High Priority) được xử lý trước, đồng thời có cơ chế trì hoãn (Delay) cho các tác vụ ít quan trọng hơn để tối ưu tài nguyên.\nKiến trúc hệ thống Hệ thống bao gồm các thành phần cốt lõi:\nBackend: Spring Boot 3 chạy trên AWS App Runner. Messaging: Amazon MQ (ActiveMQ) hỗ trợ chuẩn JMS Priority. Database: DynamoDB lưu trạng thái xử lý. Real-time: WebSocket API (Gateway) + Lambda cập nhật trạng thái ngay lập tức lên giao diện. Frontend: React SPA phân phối qua CloudFront và S3. Bạn sẽ học được gì? Cách cấu hình Amazon MQ hỗ trợ hàng đợi ưu tiên. Cách sử dụng Secrets Manager để quản lý thông tin bảo mật. Cách thiết lập luồng Real-time thông qua DynamoDB Streams và WebSocket. Cách triển khai ứng dụng container hóa lên App Runner. Cách bảo mật ứng dụng Frontend với CloudFront Origin Access Control (OAC). [!NOTE] Bài thực hành này cung cấp cả hai phương pháp: Tự tay cấu hình trên Console (để hiểu bản chất) và Tự động hóa hoàn toàn bằng mã nguồn (IaC).\nHãy bắt đầu bằng việc thiết lập cơ sở dữ liệu ở bước tiếp theo!\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/1-introduce/1.2-enablestreams/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/1-dynamodb/1.2-enablestreams/",
 	"title": "Bật DynamoDB Streams",
 	"tags": [],
 	"description": "",
 	"content": "Bật DynamoDB Streams Đây là cơ chế quan trọng: Mỗi khi một bản ghi trong DynamoDB thay đổi, một \u0026ldquo;sự kiện\u0026rdquo; sẽ được gửi ra ngoài, cho phép hệ thống đồng bộ dữ liệu Real-time.\nTrong danh sách Tables, nhấn vào tên bảng PriorityItemsTable vừa tạo. Chuyển sang tab Exports and streams. Kéo xuống mục DynamoDB stream details, nhấn nút Turn on. Ở cửa sổ hiện ra chọn New image (để truyền tải toàn bộ dữ liệu mới nhất khi có sự thay đổi), sau đó nhấn Turn on stream. Ghi chú: Luồng DynamoDB này sau này sẽ được lắng nghe bởi một hàm Lambda để bắn thông báo qua WebSocket.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/10-cleanup/10.2-cdkdestroy/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/10-cleanup/10.2-cdkdestroy/",
 	"title": "Dọn dẹp tự động (Script &amp; CDK)",
 	"tags": [],
 	"description": "",
 	"content": "Dọn dẹp tự động hoàn toàn (Khuyên dùng) Nếu bạn đã triển khai ứng dụng bằng deploy.sh, kịch bản dọn dẹp destroy.sh sẽ là cách an toàn và triệt để nhất để xóa bỏ mọi tài nguyên mà không gặp lỗi \u0026ldquo;thùng rác không trống\u0026rdquo; (Bucket not empty) hoặc \u0026ldquo;kho lưu trữ có ảnh\u0026rdquo; (ECR contains images).\n1. Chạy kịch bản dọn dẹp Tại thư mục gốc của dự án, hãy sử dụng Git Bash (trên Windows) và chạy lệnh:\nbash destroy.sh Kịch bản này sẽ tự động thực hiện:\nLàm trống S3 Bucket: Xóa mọi dữ liệu và version của Frontend trước khi xóa Bucket. Xóa ECR Images: Dọn dẹp các bản build Docker trong AWS ECR. Xóa CloudFront OAC \u0026amp; WAF: Xóa các cấu hình bảo mật đặc thù của CDN. cdk destroy \u0026ndash;all: Xóa tất cả các CloudFormation Stack (VPC, MQ, App Runner\u0026hellip;) theo đúng thứ tự phụ thuộc ngược. 2. Dọn dẹp chỉ với CDK (Cách thay thế) Nếu bạn chỉ muốn xóa các Stack hạ tầng mà không cần dọn dẹp sâu dữ liệu S3/ECR:\nDi chuyển vào thư mục /infra. Chạy lệnh: cdk destroy --all 🎉 XIN CHÚC MỪNG BẠN ĐÃ HOÀN THÀNH TOÀN BỘ BÀI THỰC HÀNH XỬ LÝ TIN NHẮN ƯU TIÊN TRÊN AWS!\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/2-createiamuser/2.2-endpointdetails/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/2-messagebroker/2.2-endpointdetails/",
 	"title": "Ghi lại Endpoint URL",
 	"tags": [],
 	"description": "",
-	"content": "Lấy thông số Endpoint Quá trình khởi tạo Broker có thể kéo dài tới 15-20 phút. Sau khi trạng thái là Running, hãy nhấn vào tên Broker của bạn.\nTìm mục Endpoints. Copy địa chỉ URL cho giao thức OpenWire (Giao thức sử dụng ssl://...). Ví dụ: ssl://b-12345-1.mq.us-east-1.amazonaws.com:61617. Giữ thông số này cẩn thận, đây là URL bạn sẽ cần điền vào biến môi trường của Spring Boot ở các phần sau.\nThêm security group Thêm quy tắc mới để cho phép apprunner có thể truy cập được như sau:\nType: Custom TCP Port Range: 61617 Source: Chọn 0.0.0.0/0 (Để cho phép App Runner từ Internet có thể gõ cửa). Description: Allow App Runner to ActiveMQ "
+	"content": "Lấy thông số Endpoint Quá trình khởi tạo Broker có thể kéo dài tới 15-20 phút. Sau khi trạng thái là Running, hãy nhấn vào tên Broker của bạn.\nTìm mục Endpoints. Copy địa chỉ URL cho giao thức OpenWire (Giao thức sử dụng ssl://...). Ví dụ: ssl://b-12345-1.mq.us-east-1.amazonaws.com:61617. Giữ thông số này cẩn thận, đây là URL bạn sẽ cần điền vào biến môi trường của Spring Boot ở các phần sau.\nThêm security group. Thêm quy tắc mới để cho phép apprunner có thể truy cập được như sau:\nType: Custom TCP Port Range: 61617 Source: Chọn 0.0.0.0/0 (Để cho phép App Runner từ Internet có thể gõ cửa). Description: Allow App Runner to ActiveMQ "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/8-/8.2-cloudwatch/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/8-validation/8.2-cloudwatch/",
 	"title": "Giám sát với CloudWatch",
 	"tags": [],
 	"description": "",
 	"content": "Dashboard và Dashboard Cảnh báo Amazon CloudWatch AWS khuyến nghị tạo Amazon CloudWatch dashboards để theo dõi hiệu suất của hệ thống xử lý tin nhắn ưu tiên trên nhiều khía cạnh khác nhau.\nGiám sát theo Mức ưu tiên (Monitoring by Priority Levels): Bạn có thể theo dõi việc xử lý tin nhắn theo các mức độ ưu tiên để đảm bảo rằng các tin nhắn có độ ưu tiên cao (High Priority) luôn được xử lý trước. Điều này cũng giúp xác định bất kỳ \u0026ldquo;điểm nghẽn\u0026rdquo; (bottlenecks) nào trong logic định tuyến ưu tiên của bạn.\nHình ảnh trên mô tả một ví dụ dashboard theo dõi số lượng tin nhắn xử lý thành công theo từng cấp độ ưu tiên.\nXác định tải hệ thống và Latency: Theo dõi độ sâu của hàng đợi (Queue Depth) và thời gian xử lý (Processing Times) để hiểu rõ tải trọng của hệ thống và các mô hình độ trễ. Điều này giúp tối ưu hóa việc phân bổ tài nguyên và xác định thời điểm cần thực hiện mở rộng (Scaling).\nTheo dõi hiệu suất DynamoDB: Quan sát các chỉ số hiệu suất của DynamoDB bao gồm tiêu thụ Read/Write Capacity, các sự kiện throttling (bị hạn chế do quá tải) và độ trễ để đảm bảo lớp cơ sở dữ liệu duy trì hiệu suất tối ưu dưới các mức tải thay đổi.\nBổ sung chỉ số tùy chỉnh (Custom Metrics): Ngoài ra, hãy triển khai các chỉ số tùy chỉnh dành riêng cho ứng dụng như tỷ lệ xử lý tin nhắn thành công, số lượng lần thử lại (retry counts) và các KPI đặc thù của doanh nghiệp để có cái nhìn sâu sắc hơn về hành vi của ứng dụng và đưa ra quyết định dựa trên dữ liệu để cải tiến liên tục.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/5-checkpolicy/5.2-launchapprunner/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/5-appdeployment/5.2-launchapprunner/",
 	"title": "Khởi chạy AWS App Runner",
 	"tags": [],
 	"description": "",
 	"content": "Khởi chạy AWS App Runner Tìm và truy cập dịch vụ AWS App Runner. Chọn Create an App Runner service. Source: Chọn Container registry -\u0026gt; Amazon ECR. Browse và chọn image priority-spring-app:latest bạn vừa đẩy lên. Mục Deployment trigger, chọn Manual. Mục ECR access role chọn Create new service role. Nhấn Next. Configure service: Service name: priority-backend-api\nPort: 8080\nKéo xuống mục Environment variables, thêm các biến sau:\nDYNAMODB_TABLE_NAME = PriorityItemsTable MQ_BROKER_URL = URL OpenWire ssl://... lấy ở Phần 2.2. AWS_REGION = Region hiện tại của bạn (VD: us-east-1). MQ_USERNAME_SECRET_NAME = MessagingStack-MessagingMqPassword Kéo xuống mục Security, Ở phần Instance role, hãy chọn role AppRunnerPriorityInstanceRole đã tạo ở Phần 4.2. Nhấn Next Review lại mọi thứ và bấm Create \u0026amp; deploy. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/9-/9.2-deployscript/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/9-automation/9.2-deployscript/",
 	"title": "Kịch bản triển khai deploy.sh",
 	"tags": [],
 	"description": "",
 	"content": "Kịch bản Triển khai Tự động File deploy.sh trong dự án thực hiện chuỗi hành động \u0026ldquo;một lệnh duy nhất\u0026rdquo;:\nCheck Môi trường: Tự động kiểm tra AWS CLI, tài khoản và vùng triển khai. Build \u0026amp; Push: Tự chạy mvn clean package, build Docker image từ file JAR và push lên kho ECR. Triển khai Hạ tầng: Chạy lệnh cdk deploy --all để xây dựng mạng lưới VPC, bật MQ, App Runner và WebSocket. Đồng bộ Frontend: Gắp các đầu API URL và WebSocket URL mới nhất điền vào mã nguồn React, build Frontend rồi đẩy trực tiếp lên CloudFront qua S3. Kết quả: Thay vì mất hàng giờ và dễ sai sót một chữ nào đó. Thực tế, bạn chỉ cần gõ 1 lệnh ./deploy.sh, ngồi chờ và toàn bộ hệ thống Enterprise sẽ tự động xuất hiện.\nGhi chú: Việc học cách cấu hình tay (Console) giúp bạn hiểu bản chất, nhưng tự động hóa bằng code (IaC) mới là cách làm chuẩn của các dự án hiện đại.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/7-/7.2-cloudfrontoac/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.2-cloudfrontoac/",
 	"title": "Tạo CloudFront Distribution",
 	"tags": [],
 	"description": "",
 	"content": "Tạo CloudFront Đây là cơ chế bảo mật cho phép S3 \u0026ldquo;nhận diện\u0026rdquo; được rằng yêu cầu đang đến từ CloudFront, giúp chúng ta bảo vệ dữ liệu bên trong S3 không bị truy cập trái phép.\nTruy cập dịch vụ CloudFront và nhấn Create distribution. Choose a plan Chọn gói Free ($0/month) để tận dụng các tính năng có sẵn trong hạn mức miễn phí. Nhấn Next. Get started Distribution name: Đặt tên gợi nhớ, ví dụ: priority-frontend-demo. Description: CloudFront cho ứng dụng Priority Demo. Distribution type: Giữ nguyên Single website or app. Nhấn Next. Specify origin (Cấu hình nguồn) Origin type: Chọn Amazon S3. S3 origin: Nhấn vào ô và chọn đúng Bucket S3 bạn đã tạo (priority-frontend-bucket-2025...). Origin path: index.html Settings: Đảm bảo đã tích chọn Allow private S3 bucket access to CloudFront - Recommended. Đây là tùy chọn tự động thiết lập OAC cho bạn. Giữ nguyên các tùy chọn Recommended cho Origin settings và Cache settings. Nhấn Next. Enable security Hệ thống sẽ tự động bao gồm các bảo vệ bảo bản (WAF). Bạn có thể giữ nguyên mặc định và nhấn Next. Review and create Kiểm tra lại toàn bộ thông tin. Hãy đảm bảo mục Grant CloudFront access to origin là Yes. Nhấn Create distribution. Lưu ý sau khi tạo: Hệ thống sẽ cung cấp cho bạn một Distribution domain name (có dạng xxxx.cloudfront.net). Bạn hãy lưu lại URL này để truy cập ứng dụng ở bước cuối cùng.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.2-connectionhandler/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/6-websocket/6.2-connectionhandler/",
 	"title": "Tạo Connection Handler",
 	"tags": [],
 	"description": "",
-	"content": "Tạo Lambda Connection Handler Hàm này sẽ thực hiện việc lưu (khi có kết nối) và xóa (khi ngắt kết nối) thông tin kết nối vào bảng vừa tạo ở bước 6.1.\nTruy cập dịch vụ AWS Lambda -\u0026gt; Create function. Function name: WebSocketConnectionHandler. Runtime: Python 3.12. Nhấn Create function. Ở phần Code, dán đoạn mã xử lý kết nối. Bạn có thể tìm thấy mã nguồn này trong file infra/modules/simple_websocket.py. Bấm Deploy Cấp quyền: Vào tab Configuration -\u0026gt; Permissions để cấp quyền cho Lambda được thao tác trên bảng simple-websocket-connections. Nhấn vào WebSocketConnectionHandler-role-xxxx để mở tab IAM Tại tab Permissions, nhấn nút Add permissions -\u0026gt; chọn Create inline policy. Chọn tab JSON và dán đoạn mã sau (nhớ thay đổi ARN của bảng cho phù hợp) rồi nhấn Next\n{ \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: [ \u0026#34;dynamodb:PutItem\u0026#34;, \u0026#34;dynamodb:DeleteItem\u0026#34; ], \u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:dynamodb:ap-southeast-1:423945942413:table/simple-websocket-connections\u0026#34; } ] } 7. Đặt tên policy là LambdaWebSocketPolicy và nhấn Create policy "
+	"content": "Tạo Lambda Connection Handler Hàm này sẽ thực hiện việc lưu (khi có kết nối) và xóa (khi ngắt kết nối) thông tin kết nối vào bảng vừa tạo ở bước 6.1.\nTruy cập dịch vụ AWS Lambda -\u0026gt; Create function. Function name: WebSocketConnectionHandler. Runtime: Python 3.12. Nhấn Create function. Ở phần Code, dán đoạn mã xử lý kết nối. Bạn có thể tìm thấy mã nguồn này trong file infra/modules/simple_websocket.py. Bấm Deploy Cấp quyền: Vào tab Configuration -\u0026gt; Permissions để cấp quyền cho Lambda được thao tác trên bảng simple-websocket-connections. Nhấn vào link Role (thường có dạng WebSocketConnectionHandler-role-xxxx, trong đó xxxx là các ký tự ngẫu nhiên của AWS) để mở giao diện quản lý IAM Role. Tại tab Permissions, nhấn nút Add permissions -\u0026gt; chọn Create inline policy. Chọn tab JSON và dán đoạn mã sau (nhớ thay đổi ARN của bảng cho phù hợp) rồi nhấn Next\n{ \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: [ \u0026#34;dynamodb:PutItem\u0026#34;, \u0026#34;dynamodb:DeleteItem\u0026#34; ], \u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:dynamodb:ap-southeast-1:423945942413:table/simple-websocket-connections\u0026#34; } ] } 7. Đặt tên policy là LambdaWebSocketPolicy và nhấn Create policy "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/2-createiamuser/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/2-messagebroker/",
 	"title": "Tạo Message Broker với Amazon MQ",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Trong phần này chúng ta sẽ khởi tạo trái tim điều phối của hệ thống - Amazon MQ (ActiveMQ). Đây là nơi tin nhắn được xếp hàng và xử lý dựa trên mức độ ưu tiên.\nCác bước thực hiện:\nKhởi tạo Broker (Single-instance broker). Lấy thông số URL kết nối (Endpoint OpenWire). "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/4-createiamrole/4.2-createrole/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/4.2-createrole/",
 	"title": "Tạo Role cho App Runner",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Instance Role Sau khi tạo Policy, chúng ta cần gán nó vào một Role để App Runner có thể mượn quyền khi khởi chạy Backend.\nỞ menu IAM bên trái, chọn Roles -\u0026gt; Create role. Trusted entity type: Chọn Custom trust policy. Dán đoạn mã sau vào: { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Principal\u0026#34;: { \u0026#34;Service\u0026#34;: \u0026#34;build.apprunner.amazonaws.com\u0026#34; }, \u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34; } ] } Ô Add permissions, tìm kiếm policy AppRunnerPriorityPolicy vừa tạo ở bước 4.1, tích chọn nó. Nhấn Next. Ở Name, Review, and Create đặt tên Role là AppRunnerPriorityInstanceRole. Nhấn Create role. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/8-/8.3-securitycost/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/8-validation/8.3-securitycost/",
 	"title": "Bảo mật và Chi phí",
 	"tags": [],
 	"description": "",
 	"content": "Cân nhắc về Bảo mật (Security Considerations) AWS khuyên bạn nên thực hiện các biện pháp bảo mật toàn diện để bảo vệ hệ thống xử lý tin nhắn của mình:\nNguyên tắc Quyền tối thiểu (Least Privilege): Áp dụng các chính sách IAM chỉ cấp các quyền tối thiểu cần thiết cho mỗi thành phần để hoạt động, đảm bảo các dịch vụ như App Runner chỉ có thể truy cập các bảng DynamoDB và hàng đợi Amazon MQ cụ thể mà họ cần. VPC và Cách ly Mạng: Cấu hình cấu trúc mạng của bạn bằng VPC với các subnet riêng tư cho Amazon MQ, cách ly backend khỏi việc truy cập trực tiếp từ Internet trong khi vẫn duy trì khả năng kết nối thông qua NAT Gateways cho các kết nối outbound cần thiết. Mã hóa dữ liệu (Encryption): Bật mã hóa dữ liệu khi nghỉ (Encryption at rest) bằng AWS KMS cho các bảng DynamoDB và dữ liệu Amazon MQ. Đồng thời thực thi mã hóa khi truyền tải (Encryption in transit) bằng cách định cấu hình kết nối SSL/TLS cho tất cả các thông tin liên lạc dịch vụ, đặc biệt là đối với các kết nối Broker ActiveMQ. Security Groups: Thiết lập các quy tắc truy cập tối thiểu, chỉ cho phép luồng giao thông giữa các thành phần cần thiết cho sự vận hành của ứng dụng, ví dụ như cổng 61617 cho các kết nối SSL của ActiveMQ từ các thực thể App Runner. Cân nhắc về Chi phí (Cost Considerations) Bảng dưới đây chứa các ước tính chi phí dựa trên khu vực US East (N. Virginia). Chi phí thực tế có thể thay đổi tùy thuộc vào khu vực của bạn, mức sử dụng và các thay đổi về giá cả.\nDịch vụ Thấp (1,000 msg/ngày) Trung bình (10,000 msg/ngày) Cao (100,000 msg/ngày) Amazon DynamoDB $5–10 $25–50 $200–400 Amazon MQ $15 (t3.micro) $30 (m5.large) $120 (m5.xlarge) AWS App Runner $20–40 $50–150 $400–800 Amazon API Gateway WebSocket $3–5 $10–25 $50–100 Amazon CloudWatch Logs $5–10 $10–20 $30–50 Data Transfer $5 $10-20 $50-100 Tổng ước tính chi phí $53–95 $135–295 $850–1,570 "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/3-createiampolicy/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/3-secretsmanager/",
 	"title": "Lưu trữ Mật khẩu với AWS Secrets Manager",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan phần này Theo tiêu chuẩn bảo mật của AWS, các hệ thống backend không nên để mật khẩu trực tiếp trong mã nguồn. Chúng ta sẽ lưu trữ mật khẩu Broker này vào Secrets Manager.\nCác nội dung chính trong phần này:\nTạo một Secret mới chứa thông tin đăng nhập của Amazon MQ. Đặt tên khớp với cấu hình của mã nguồn. Tạo Secret cho Broker Để tránh việc phải ghi trực tiếp mật khẩu Broker vào mã nguồn (Hardcode), chúng ta sẽ cất mật khẩu vào Secrets Manager.\nTìm và truy cập dịch vụ Secrets Manager. Nhấn nút Store a new secret. Ở mục Secret type, chọn Other type of secret. Chọn sang tab Plaintext và nhập nội dung JSON chứa thông tin đăng nhập MQ: { \u0026#34;username\u0026#34;: \u0026#34;admin\u0026#34;, \u0026#34;password\u0026#34;: \u0026#34;MyP@ssw0rd2025!\u0026#34; } Tiếp tục kéo xuống dưới cùng và chọn Next. Ở phần Configure secret: Đặt tên Secret là: MessagingStack-MessagingMqPassword. (Tên này phải trùng khớp hoàn toàn với cấu hình @Value trong Spring Boot). Description: Password for Amazon MQ Broker Tiếp tục kéo xuống dưới cùng và chọn Next. Ở phần Configure rotation, chọn Disable automatic rotation (mặc định). Nhấn Next. Ở phần Review, kiểm tra lại thông tin và nhấn Store. Ghi chú: Việc quản trị mật khẩu tập trung thông qua Secrets Manager giúp chúng ta dễ dàng thay đổi mật khẩu định kỳ mà không phải build lại code.\n"
+	"content": "Tổng quan phần này Theo tiêu chuẩn bảo mật của AWS, các hệ thống backend không nên để mật khẩu trực tiếp trong mã nguồn. Chúng ta sẽ lưu trữ mật khẩu Broker này vào Secrets Manager.\nCác nội dung chính trong phần này:\nTạo một Secret mới chứa thông tin đăng nhập của Amazon MQ. Đặt tên khớp với cấu hình của mã nguồn. Tạo Secret cho Broker Để tránh việc phải ghi trực tiếp mật khẩu Broker vào mã nguồn (Hardcode), chúng ta sẽ cất mật khẩu vào Secrets Manager.\nTìm và truy cập dịch vụ Secrets Manager. Nhấn nút Store a new secret. Ở mục Secret type, chọn Other type of secret. Chọn sang tab Plaintext và nhập nội dung JSON chứa thông tin đăng nhập MQ: { \u0026#34;username\u0026#34;: \u0026#34;admin\u0026#34;, \u0026#34;password\u0026#34;: \u0026#34;MyP@ssw0rd2025!\u0026#34; } Tiếp tục kéo xuống dưới cùng và chọn Next. Ở phần Configure secret:\nĐặt tên Secret là: MessagingStack-MessagingMqPassword. (Tên này phải trùng khớp hoàn toàn với cấu hình @Value trong Spring Boot). Description: Password for Amazon MQ Broker Tiếp tục kéo xuống dưới cùng và chọn Next. Ở phần Configure rotation, chọn Disable automatic rotation (mặc định). Nhấn Next. Ở phần Review, kiểm tra lại thông tin và nhấn Store. Ghi chú: Việc quản trị mật khẩu tập trung thông qua Secrets Manager giúp chúng ta dễ dàng thay đổi mật khẩu định kỳ mà không phải build lại code.\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.3-apigateway/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/6-websocket/6.3-apigateway/",
 	"title": "Tạo API Gateway WebSocket",
 	"tags": [],
 	"description": "",
 	"content": "Tạo API Gateway WebSocket Dịch vụ này cung cấp một URL duy nhất để trình duyệt có thể giữ kết nối liên tục với hệ thống.\nTruy cập API Gateway -\u0026gt; Chọn Build ở ô WebSocket API. API name: simple-websocket-api. Route selection expression: request.body.action. Nhấn Next Add routes: Thêm 2 route $connect và $disconnect. Nhấn Next. Attach integrations: Cả 2 route này đều chọn Integration type là Lambda và chọn function WebSocketConnectionHandler vừa tạo ở 6.2. Bấm Next, đặt Stage name là prod. Bấm Next. Review and create: kiểm tra hết lại và nhấn Create and deploy Cuối cùng, ghi lại URL WebSocket có dạng wss://\u0026lt;api-id\u0026gt;.execute-api.\u0026lt;region\u0026gt;.amazonaws.com/prod "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/7-/7.3-cognito/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.3-cognito/",
 	"title": "Tạo Cognito Identity Pool",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan về Cognito Identity Pool Để Frontend (React SPA) có thể truy cập trực tiếp vào DynamoDB mà không cần thông qua Backend (để lấy dữ liệu thời gian thực), chúng ta sẽ sử dụng Amazon Cognito Identity Pool. Dịch vụ này cho phép cấp quyền AWS tạm thời cho người dùng cuối (ở đây là các \u0026ldquo;Guest\u0026rdquo; không cần đăng nhập).\nCác bước thực hiện Truy cập dịch vụ Amazon Cognito từ AWS Console. Chọn Identity pools. Nhấn nút Create identity pool. Configure trust policy:\nChọn Guest access (vì chúng ta muốn cho phép người dùng xem trang web mà không cần đăng nhập). Nhấn Next. Configure permissions:\nTại mục Guest access role, chọn Create a new IAM role. Role name: Nhập PriorityAppGuestRole. Nhấn Next. Configure properties:\nIdentity pool name: Nhập PriorityIdentityPool. Nhấn Next. Review and create:\nKiểm tra lại thông tin và nhấn Create identity pool. Cấp quyền cho IAM Role Mặc định, Role PriorityAppGuestRole vừa tạo chưa có quyền thao tác với DynamoDB. Chúng ta cần bổ sung thêm:\nTruy cập dịch vụ IAM -\u0026gt; Roles. Tìm và chọn Role có tên PriorityAppGuestRole (hoặc tên bạn đã đặt ở bước trên). Nhấn Add permissions -\u0026gt; Create inline policy. Chọn tab JSON và dán đoạn mã sau vào (Hãy đảm bảo tên bảng DynamoDB là PriorityItemsTable): { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: [ \u0026#34;dynamodb:Scan\u0026#34;, \u0026#34;dynamodb:PutItem\u0026#34;, \u0026#34;dynamodb:UpdateItem\u0026#34; ], \u0026#34;Resource\u0026#34;: \u0026#34;*\u0026#34; } ] } Trong thực tế, bạn nên giới hạn Resource tới ARN cụ thể của bảng DynamoDB để đảm bảo bảo mật. Ở đây chúng ta dùng * cho mục đích demo nhanh.\nNhấn Review policy, đặt tên là DynamoDBLimitedAccess và nhấn Create policy. Lưu lại Identity Pool ID Quay lại trang chi tiết của Identity Pool PriorityIdentityPool. Copy giá trị Identity pool ID (có dạng ap-southeast-1:xxxxxxxx-xxxx-xxxx...). Bạn sẽ cần giá trị này ở bước tiếp theo để cấu hình trong mã nguồn Frontend. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/7-/7.3-policyupload/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/7-cloudfront/7.3-policyupload/",
 	"title": "Cập nhật Bucket Policy và Tải lên Frontend",
 	"tags": [],
 	"description": "",
 	"content": "Thiết lập quyền và Tải lên mã nguồn Sau khi CloudFront tạo xong, hãy copy đoạn Bucket Policy\nTừ CloudFront, truy cập vào Origins, nhấn vào Origin ID của bạn và nhấn Edit Quay lại dịch vụ S3, vào bucket của bạn an chọn tab Permissions -\u0026gt; Bucket Policy -\u0026gt; Edit. Dán đoạn JSON vừa copy vào.\nBước này cho phép CloudFront OAC được lấy file trong bucket của bạn. Tải và Cấu hình mã nguồn:\nTrước tiên, hãy tải thư mục nén chứa mã nguồn Frontend tại đây: spa-app.zip Sau khi tải về, hãy giải nén ra máy tính của bạn. Ở máy tính, mở spa-app/src/App.js từ thư mục giải nén đó bằng IDE. Cập nhật 3 tham số: IdentityPoolId, ALLOWED_API_BASE, ALLOWED_WS_BASE Chạy lệnh: cd spa-app npm install npm run build Tải toàn bộ nội dung trong thư mục build/ lên S3 Bucket priority-frontend-bucket-2025. aws s3 sync build/ s3://priority-frontend-bucket-2025 --delete Kiếm tra S3 trên console. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/4-createiamrole/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/4-iamconfiguration/",
 	"title": "Cấu hình Quyền (IAM Role) cho Ứng dụng",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Backend của chúng ta (App Runner) cần quyền để đọc DynamoDB và giải mã mật khẩu từ Secrets Manager. Chúng ta sẽ làm điều này thông qua cơ chế Role và Policy.\nCác nội dung chính trong phần này:\nTạo Chính sách quyền (Policy JSON) chứa quyền đọc DB và Secrets. Tạo Role cho App Runner và gán chính sách đó vào. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/6.4-streamprocessor/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/6-websocket/6.4-streamprocessor/",
 	"title": "Tạo Stream Processor",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Stream Processor Đây là cầu nối quan trọng: Khi tin nhắn được xử lý xong (trạng thái đổi), DynamoDB Streams sẽ kích hoạt hàm này để gửi dữ liệu xuống tất cả các WebSocket đang kết nối.\nTạo một Lambda function thứ hai tên là StreamProcessor (Python 3.12). Dán mã nguồn từ file infra/modules/simple_websocket.py (Mã này nhận sự kiện từ DynamoDB Streams, sau đó vòng lặp qua simple-websocket-connections và gọi lệnh post_to_connection của API Gateway). import json import boto3 import logging import os from botocore.exceptions import ClientError logger = logging.getLogger() logger.setLevel(logging.INFO) def lambda_handler(event, context): dynamodb = boto3.resource(\u0026#39;dynamodb\u0026#39;) connections_table = dynamodb.Table(\u0026#39;simple-websocket-connections\u0026#39;) api_id = os.environ[\u0026#39;API_ID\u0026#39;].strip() region = os.environ[\u0026#39;AWS_REGION\u0026#39;] endpoint_url = f\u0026#34;https://{api_id}.execute-api.{region}.amazonaws.com/prod\u0026#34; apigateway = boto3.client(\u0026#39;apigatewaymanagementapi\u0026#39;, endpoint_url=endpoint_url) # 1. Lấy danh sách kết nối try: response = connections_table.scan() connections = response.get(\u0026#39;Items\u0026#39;, []) logger.info(f\u0026#34;Tìm thấy {len(connections)} kết nối đang online\u0026#34;) except Exception as e: logger.error(f\u0026#34;Lỗi khi SCAN bảng: {str(e)}\u0026#34;) return # 2. Xử lý từng bản ghi thay đổi for record in event[\u0026#39;Records\u0026#39;]: event_name = record[\u0026#39;eventName\u0026#39;] # CHUYỂN ĐỔI DỮ LIỆU SANG JSON SẠCH (Rất quan trọng cho React) raw_data = record[\u0026#39;dynamodb\u0026#39;].get(\u0026#39;NewImage\u0026#39;, record[\u0026#39;dynamodb\u0026#39;].get(\u0026#39;OldImage\u0026#39;)) clean_data = convert_dynamodb_to_json(raw_data) change_data = { \u0026#39;eventName\u0026#39;: event_name, \u0026#39;data\u0026#39;: clean_data } # 3. Gửi tin nhắn for conn in connections: conn_id = conn[\u0026#39;connectionId\u0026#39;] try: apigateway.post_to_connection(ConnectionId=conn_id, Data=json.dumps(change_data)) logger.info(f\u0026#34;Gửi thành công {event_name} tới {conn_id}\u0026#34;) except Exception as e: logger.error(f\u0026#34;Lỗi khi gửi tới {conn_id}: {str(e)}\u0026#34;) logger.info(\u0026#34;--- KẾT THÚC XỬ LÝ ---\u0026#34;) def convert_dynamodb_to_json(dynamodb_item): \u0026#34;\u0026#34;\u0026#34;Hàm này giúp xóa các ký tự {S}, {N} để React không bị crash\u0026#34;\u0026#34;\u0026#34; def convert_value(value): if \u0026#39;S\u0026#39; in value: return value[\u0026#39;S\u0026#39;] elif \u0026#39;N\u0026#39; in value: return float(value[\u0026#39;N\u0026#39;]) if \u0026#39;.\u0026#39; in value[\u0026#39;N\u0026#39;] else int(value[\u0026#39;N\u0026#39;]) elif \u0026#39;BOOL\u0026#39; in value: return value[\u0026#39;BOOL\u0026#39;] elif \u0026#39;NULL\u0026#39; in value: return None elif \u0026#39;L\u0026#39; in value: return [convert_value(v) for v in value[\u0026#39;L\u0026#39;]] elif \u0026#39;M\u0026#39; in value: return {k: convert_value(v) for k, v in value[\u0026#39;M\u0026#39;].items()} return value return {k: convert_value(v) for k, v in dynamodb_item.items()} Cấp quyền: Lambda này cần quyền execute-api:ManageConnections, dynamodb:GetRecords, dynamodb:GetShardIterator, dynamodb:DescribeStream, dynamodb:ListStreams để gửi tin nhắn thông qua API Gateway, đọc DynamoDB Streams. Cấp thêm quyền StreamProcessorPolicy { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: \u0026#34;execute-api:ManageConnections\u0026#34;, \u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:execute-api:ap-southeast-1:423945942413:kvtige2lb3/prod/POST/@connections/*\u0026#34; } ] } Thêm Trigger: Nhấn Add trigger -\u0026gt; Chọn DynamoDB -\u0026gt; Chọn bảng PriorityItemsTable (bảng tạo ở Phần 1). "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/5-checkpolicy/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/5-appdeployment/",
 	"title": "Đưa ứng dụng Spring Boot lên AWS (ECR + App Runner)",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Chúng ta sẽ đưa mã nguồn Backend của mình lên đám mây thông qua kiến trúc Container. Phân tách thành 2 bước:\nĐóng gói Image và đẩy lên Amazon ECR. Chạy ứng dụng trên AWS App Runner - dịch vụ Container Serverless. Các nội dung chính trong phần này:\nBuild và Push Docker Image. Khởi chạy API Backend và thiết lập biến môi trường. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/6-cleanup/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/6-websocket/",
 	"title": "Cấu hình Real-time Updates với WebSocket (API Gateway + Lambda)",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Hệ thống của chúng ta xử lý tin nhắn trong hàng đợi. Để người dùng thấy được trạng thái thay đổi ngay lập tức (Real-time), chúng ta cần thiết lập luồng kết nối WebSocket.\nCác bước thực hiện:\nTạo bảng lưu danh sách kết nối (Connections Table). Tạo Lambda Function quản lý việc đóng/mở kết nối. Thiết lập API Gateway WebSocket. Tạo Lambda Stream Processor để bắt sự kiện từ DB và phát sóng tới người dùng. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/7-/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/7-cloudfront/",
 	"title": "Phân phối toàn cầu và Bảo mật với CloudFront",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan phần này Giao diện web (Frontend) của ứng dụng sẽ được lưu trữ và bảo mật theo chuẩn Enterprise. Tuyệt đối không để Public hoàn toàn trên S3 mà sẽ chỉ cho phép truy cập duy nhất qua dịch vụ phân phối CloudFront CDN.\nCác bước thực hiện:\nTạo S3 Private Bucket để chứa mã nguồn Frontend. Thiết lập dịch vụ CloudFront với cơ chế Origin Access Control (OAC). Cập nhật Policy của S3 để chỉ chấp nhận yêu cầu từ cái CloudFront CDN đó. Cấu hình API Backend URL và build React SPA. "
+	"content": "Tổng quan phần này Giao diện web (Frontend) của ứng dụng sẽ được lưu trữ và bảo mật theo chuẩn Enterprise. Tuyệt đối không để Public hoàn toàn trên S3 mà sẽ chỉ cho phép truy cập duy nhất qua dịch vụ phân phối CloudFront CDN.\nCác bước thực hiện:\nTạo S3 Private Bucket để chứa mã nguồn Frontend. Thiết lập dịch vụ CloudFront với cơ chế Origin Access Control (OAC). Cập nhật Policy của S3 để chỉ chấp nhận yêu cầu từ CloudFront CDN này. Cấu hình API Backend URL và build React SPA. "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/8-/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/8-validation/",
 	"title": "Kiểm tra giao diện Web",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Sau khi đã thiết lập xong luồng WebSocket và triển khai ứng dụng Frontend lên CloudFront, chúng ta sẽ bắt đầu kiểm nghiệm hệ thống xử lý tin nhắn ưu tiên. Phần này sẽ hướng dẫn bạn cách thực hiện các bài kiểm tra tự động và thủ công, đồng thời quan sát quá trình xử lý tin nhắn theo thời gian thực (Real-time).\nCác nội dung chính:\nThiết lập WebSocket và Real-time: Recap các bước cấu hình API Gateway và Lambda Stream Processor. Triển khai ứng dụng React: Đưa mã nguồn frontend lên S3 và phân phối toàn cầu qua CloudFront. Kiểm chứng giải pháp: Thực hiện các bài test gửi tin nhắn với mức ưu tiên khác nhau (High/Low/Medium). Giám sát qua CloudWatch: Theo dõi hiệu năng hệ thống qua dashboard và cảnh báo. Cân nhắc Bảo mật và Chi phí: Các yếu tố cần lưu ý để vận hành hệ thống một cách tối ưu. 1. Thiết lập Cập nhật thời gian thực (Real-time Updates) Ở bước này, chúng ta đã triển khai hỗ trợ WebSocket để cập nhật trạng thái tin nhắn tức thời. Sử dụng AWS Lambda để xử lý DynamoDB Streams và gửi bản cập nhật đến người dùng đã kết nối thông qua kết nối WebSocket của Amazon API Gateway. Bạn có thể xem chi tiết mã nguồn và hướng dẫn đầy đủ tại đây (Liên kết tới phần cấu hình WebSocket).\n2. Triển khai React Web App lên S3 và CloudFront Chúng ta đã tạo ứng dụng React để bật kết nối WebSocket, cho phép nhìn thấy tin nhắn được cập nhật động trong DynamoDB và thông báo API Gateway WebSocket. Tham khảo chi tiết các bước tại đây (Liên kết tới phần cấu hình CloudFront).\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/9-/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/9-automation/",
 	"title": "Tự động hóa với Mã nguồn (Infra &amp; Deploy.sh)",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan phần này Tất cả các phần làm việc cực nhọc ở trên với hàng chục bước trên AWS Console có thể được thay thế hoàn toàn bởi mã nguồn tự động hóa. Đây là lý do cốt lõi của việc quản trị hạ tầng hiện đại.\nCác nội dung chính trong phần này:\nTìm hiểu về các module AWS CDK bằng Python ứng dụng trong dự án. Cách kịch bản deploy.sh tự động hóa build Docker, push ECR, deploy CDK/CloudFormation và đồng bộ Frontend. Tải infra và file deploy, destroy tại đây (áp dụng cho windows): Auto.zip\nTải infra và file deploy, destroy tại đây (áp dụng cho linux): Auto-linux.zip\n"
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/10-cleanup/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/10-cleanup/",
 	"title": "Dọn dẹp tài nguyên và Chi phí",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan phần này Để đảm bảo không phát sinh chi phí sau bài thực hành, chúng ta sẽ thực hiện dọn dẹp các tài nguyên đã tạo.\nHệ thống cung cấp các phương cách dọn dẹp và dự toán chi phí như sau:\nDọn dẹp Thủ công (Console): Hướng dẫn xóa từng dịch vụ trên giao diện AWS. Dọn dẹp Tự động (Script \u0026amp; CDK): Sử dụng kịch bản destroy.sh hoặc lệnh cdk destroy để xóa nhanh chóng và triệt để mọi tài nguyên. (Khuyên dùng destroy.sh). Cân nhắc về Chi phí: Bảng ước tính chi phí vận hành hàng tháng cho dự án. "
+	"content": "Tổng quan phần này Để đảm bảo không phát sinh chi phí sau bài thực hành, chúng ta sẽ thực hiện dọn dẹp các tài nguyên đã tạo.\nHệ thống cung cấp các phương cách dọn dẹp và dự toán chi phí như sau:\nDọn dẹp Thủ công (Console): Hướng dẫn xóa từng dịch vụ trên giao diện AWS. Dọn dẹp Tự động (Script \u0026amp; CDK): Sử dụng kịch bản destroy.sh hoặc lệnh cdk destroy để xóa nhanh chóng và triệt để mọi tài nguyên. (Khuyên dùng destroy.sh). "
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/categories/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://hieu192.github.io/workshop-3-2026/vi/tags/",
+	"uri": "http://localhost:1313/workshop-3-2026/vi/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

@@ -17,12 +17,3 @@ After completing the WebSocket flow setup and deploying the Frontend application
 4. **Monitoring via CloudWatch**: Tracking system performance through dashboards and alerts.
 5. **Security and Cost Considerations**: Factors to consider for optimal system operation.
 
----
-
-#### 1. Set up Real-time Updates
-In this step, we have implemented WebSocket support to update message status instantly. Using AWS Lambda to process DynamoDB Streams and send updates to connected users via Amazon API Gateway WebSocket connection.
-*You can view the detailed source code and full instructions [here](../6-WebSocket/)* (Link to WebSocket configuration section).
-
-#### 2. Deploy React Web App to S3 and CloudFront
-We've created a React app to enable the WebSocket connection, allowing us to see messages updated dynamically in DynamoDB and API Gateway WebSocket notifications.
-*Refer to detailed steps [here](../7-CloudFront/) (Link to CloudFront configuration section).*
